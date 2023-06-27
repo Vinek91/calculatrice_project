@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<body>
+
+
+        <div class="calculatrice">
+        <p class="ecran" [hidden]="nbSaisie"  style="color:rgba(239, 239, 239, 0.578);">{{resultOld}}<br>------------------------------------------------<br><span id="typewriter"  style="color:white">{{nb}}</span></p>
+        <p class="ecran" [hidden]="ansCache"  style="color:rgba(239, 239, 239, 0.578);">{{resultOld}}<br>------------------------------------------------<br><span id="typewriter"  style="color:white">ANS {{nb}}</span></p>
+        <p class="ecran" [hidden]="resultCache"><br>------------------------------------------------<br>={{resultat}}</p>
+        <p class="ecran" [hidden]="errCache" style="color:rgb(255 65 65);"><br><br>{{messageErr}}</p>
+       
+
+        <button name="exposant" class="operation" (click)="exposant()">x^</button>
+        <button name="parenthesegauche" [(ngModel)]="parenthesegauche" class="operation" (click)="parenthese(parenthesegauche)">(</button>
+        <button name="parenthesedroite" [(ngModel)]="parenthesedroite" class="operation" (click)="parenthese(parenthesedroite)">)</button>
+        <button id="racine" class="operation" (click)="racine()">√</button>
+        <button name="exposant" class="operation" (click)="pi()">π</button>
+
+        
+        <br>
+        <button id="7" class="button" (click)="updateNb(7)">7</button>
+        <button id="8" class="button" (click)="updateNb(8)">8</button>
+        <button id="9" class="button" (click)="updateNb(9)">9</button>
+        <button id="del" class="suppr" (click)="supprimer()">DEL</button>
+        <button id="ac" class="suppr" (click)="supprimerTout()">AC</button>
+        <br>
+        <button id="4" class="button" (click)="updateNb(4)">4</button>
+        <button id="5" class="button" (click)="updateNb(5)">5</button>
+        <button id="6" class="button" (click)="updateNb(6)">6</button>
+        <button id="*" class="operation"  (click)="multiplier()">x</button>
+        <button id="/" class="operation"  (click)="diviser()">÷</button>
+        <br>
+        <button id="1" class="button" (click)="updateNb(1)">1</button>
+        <button id="2" class="button" (click)="updateNb(2)">2</button>
+        <button id="3" class="button" (click)="updateNb(3)">3</button>
+        <button id="+" class="operation" (click)="addition()">+</button>
+        <button id="-" class="operation"  (click)="soustraire()">-</button>
+        <br>
+        <button id="0" class="button" (click)="updateNb(0)">0</button>
+        <button id="." class="operation" (click)="virgule()">,</button>
+        <button id="ans" class="operation" (click)="methodAns()">ANS</button>
+        <button id="=" class="egale" (click)="egale()">=</button>
+
+        
+
+    </div>
+</body>

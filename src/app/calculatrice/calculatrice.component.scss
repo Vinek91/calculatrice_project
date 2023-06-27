@@ -1,0 +1,65 @@
+
+p{
+    color: white;
+}
+#typewriter {
+    color: white;
+    overflow: hidden; /* Pour masquer les caractères supplémentaires */
+    border-right: .15em solid rgb(255, 255, 255); /* Effet de curseur de saisie */
+    white-space: nowrap; /* Empêche le retour à la ligne */
+    animation: typing 1s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: rgb(255, 255, 255) }
+}
+
+button{
+    padding: 1em;
+    background-color: white;
+    width: 4.08em;
+    border-width: 0.5px;
+}
+
+.button:hover{
+    background-color: #0cdcdc;
+}
+
+.suppr{
+    background-color: rgb(255 65 65);
+    
+}
+
+
+
+.egale{
+    background-color: #AC8CFF;
+    width: 8.16em;
+}
+
+.calculatrice{
+    background-color: #414141;
+    border-color: #414141;
+    width: 17em;
+    border-top-style: solid;
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+}
+
+.ecran{
+    background-color: #414141;
+    padding: 0.5em;
+    margin-bottom: 0px;
+    overflow-y: auto;
+}
+
+
+.operation{
+    background-color: #ebebeb;
+}
